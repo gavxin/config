@@ -12,15 +12,24 @@ git clone https://github.com/gavxin/config ~/config
 # change dir to repo
 cd ~/config
 
+#
 # alacritty
-ln -s $(pwd)/alacritty ~/.config/alacritty
+#
+mkdir ~/.config/alacritty
+cp alacritty/alacritty.toml ~/.config/alacritty/
+# do some modification for your own
+vim ~/.config/alacritty/alacritty.toml
 
+#
 # neovim
+#
 # remove old
 # mv ~/.config/nvim ~/.config/nvim.bak
 # mv ~/.local/share/nvim ~/.local/share/nvim.bak
 # mv ~/.local/state/nvim ~/.local/state/nvim.bak
 # mv ~/.cache/nvim ~/.cache/nvim.bak
+#
+# make symbolic link
 ln -s $(pwd)/nvim ~/.config/nvim
 ```
 
@@ -32,13 +41,22 @@ Open powershell as administrator
 # change dir to repo
 cd ~/config
 
+#
 # alacritty
-New-Item -ItemType SymbolicLink -Path "$env:APPDATA\alacritty" -Target .\alacritty
+#
+mkdir "$env:APPDATA\alacritty"
+cp alacritty/alacritty.toml "$env:APPDATA\alacritty\"
+# do some modification for your own
+vim ~/.config/alacritty/alacritty.toml
 
+#
 # neovim
+#
 # remove old
 # Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
 # Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
+#
+# make symbolic link
 New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\nvim" -Target .\nvim
 ```
 

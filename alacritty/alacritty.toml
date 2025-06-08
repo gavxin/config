@@ -1,13 +1,14 @@
 [general]
-# working_directory = "$HOME"
+# working_directory = "~"
+# working_directory = "C:\\Users\\XXX"
 
 [window]
 dimensions = { columns = 140, lines = 45 }
-opacity = 0.96
+# opacity = 0.96
 
 [scrolling]
 history = 100000
 
 [font]
-normal = { family = "Iosevka Nerd Font", style = "Regular" }
-size = 12
+normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
+size = 14
