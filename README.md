@@ -16,6 +16,7 @@ cd ~/config
 ln -s $(pwd)/alacritty ~/.config/alacritty
 
 # neovim
+# remove old
 # mv ~/.config/nvim ~/.config/nvim.bak
 # mv ~/.local/share/nvim ~/.local/share/nvim.bak
 # mv ~/.local/state/nvim ~/.local/state/nvim.bak
@@ -35,6 +36,7 @@ cd ~/config
 New-Item -ItemType SymbolicLink -Path "$env:APPDATA\alacritty" -Target .\alacritty
 
 # neovim
+# remove old
 # Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
 # Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
 New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\nvim" -Target .\nvim
