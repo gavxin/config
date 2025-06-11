@@ -1,9 +1,9 @@
 return {
-  -- using super tab
+  -- use super tab
   {
     "saghen/blink.cmp",
     opts = {
       keymap = { preset = "super-tab" },
     },
-  }
+  },
 }
